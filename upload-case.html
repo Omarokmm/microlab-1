@@ -71,14 +71,15 @@
                       <i class="fas fa-tooth"></i>
                     </div>
                     <div class="logo-text">
-                      <h2>MicroDental Lab</h2>
+                      <h2>MICRO Tech Dental Lab</h2>
                       <p>Job Order Form</p>
                     </div>
                   </div>
                   <div class="contact-info">
-                    <p><strong>Address:</strong> 408 Dana Street, Doha, Qatar</p>
-                    <p><strong>Tel:</strong> +974 5076 5073 | <strong>Fax:</strong> +974 5076 5074</p>
-                    <p><strong>Mobile:</strong> +974 5076 5073 | <strong>Email:</strong> info@microdentallab.com</p>
+                    <p><strong>Address:</strong> Qatar Doha - Abu hamour</p>
+                    <p><strong>Mobile:</strong> +974 518 70007</p>
+                    <p><strong>TEL:</strong> +974 4463 1594 | <strong>Lab Manager:</strong> +974 51 8000 56</p>
+                    <p><strong>Email:</strong> info@microdentaltech.com</p>
                   </div>
                 </div>
                 <div class="header-right">
@@ -94,37 +95,38 @@
               <!-- Main Form -->
               <form id="dentalJobForm" class="dental-job-form">
                 
+                <!-- Job & Patient File Section -->
+                <div class="form-section">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="jobNumber">Job Number</label>
+                        <input type="text" id="jobNumber" name="jobNumber" class="form-control" placeholder="Job Number">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="patientFileNo">Patient's File No.</label>
+                        <input type="text" id="patientFileNo" name="patientFileNo" class="form-control" placeholder="Patient's File No.">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
                 <!-- Schedule Section -->
                 <div class="form-section">
                   <h3 class="section-title">SCHEDULE</h3>
                   <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                       <div class="form-group">
-                        <label for="dateIn">Date In</label>
-                        <input type="date" id="dateIn" name="dateIn" class="form-control" required>
+                        <label for="receivedDate">Received Date (DD/MM/20YY)</label>
+                        <input type="text" id="receivedDate" name="receivedDate" class="form-control" placeholder="DD/MM/20YY" pattern="\d{2}/\d{2}/20\d{2}">
                       </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                       <div class="form-group">
-                        <label for="dateOut">Date Out</label>
-                        <input type="date" id="dateOut" name="dateOut" class="form-control" required>
-                      </div>
-                    </div>
-                    <div class="col-md-3">
-                      <div class="form-group">
-                        <label for="time">Time</label>
-                        <input type="time" id="time" name="time" class="form-control" required>
-                      </div>
-                    </div>
-                    <div class="col-md-3">
-                      <div class="form-group">
-                        <label for="period">Period</label>
-                        <select id="period" name="period" class="form-control" required>
-                          <option value="">Select Period</option>
-                          <option value="urgent">Urgent (24-48 hours)</option>
-                          <option value="standard">Standard (3-5 days)</option>
-                          <option value="extended">Extended (1-2 weeks)</option>
-                        </select>
+                        <label for="deliveryDate">Delivery Date (DD/MM/20YY)</label>
+                        <input type="text" id="deliveryDate" name="deliveryDate" class="form-control" placeholder="DD/MM/20YY" pattern="\d{2}/\d{2}/20\d{2}">
                       </div>
                     </div>
                   </div>
@@ -136,10 +138,17 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label for="clinicName">Clinic / Dentist's Name</label>
-                        <input type="text" id="clinicName" name="clinicName" class="form-control" placeholder="Doctor Name" required>
+                        <label for="doctorName">Doctor Name</label>
+                        <input type="text" id="doctorName" name="doctorName" class="form-control" placeholder="Doctor Name" required>
                       </div>
                     </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="dentalCenter">Dental Center</label>
+                        <input type="text" id="dentalCenter" name="dentalCenter" class="form-control" placeholder="Dental Center">
+                      </div>
+                    </div>
+                  </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="telephone">Telephone</label>
@@ -198,75 +207,98 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="checkbox-group">
-                        <h4>Restoration Types</h4>
+                        <h4>Fixed Prosthesis</h4>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="workType" id="zirkon" value="zirkon">
-                          <label class="form-check-label" for="zirkon">Zirkon</label>
+                          <input class="form-check-input" type="checkbox" name="workType" id="crown" value="crown">
+                          <label class="form-check-label" for="crown">Crown</label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="workType" id="fullZirkon" value="fullZirkon">
-                          <label class="form-check-label" for="fullZirkon">Full Zirkon</label>
+                          <input class="form-check-input" type="checkbox" name="workType" id="bridge" value="bridge">
+                          <label class="form-check-label" for="bridge">Bridge</label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="workType" id="postCore" value="postCore">
-                          <label class="form-check-label" for="postCore">Post & Core</label>
+                          <input class="form-check-input" type="checkbox" name="workType" id="veneer" value="veneer">
+                          <label class="form-check-label" for="veneer">Veneer</label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="workType" id="composite" value="composite">
-                          <label class="form-check-label" for="composite">Composite</label>
+                          <input class="form-check-input" type="checkbox" name="workType" id="inlayOnlay" value="inlayOnlay">
+                          <label class="form-check-label" for="inlayOnlay">Inlay/onlay</label>
+                        </div>
+                      </div>
+                      <div class="checkbox-group">
+                        <h4>Dental Restoration</h4>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" name="workType" id="emaxIpsImpress" value="emaxIpsImpress">
+                          <label class="form-check-label" for="emaxIpsImpress">Emax IPS Impress</label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="workType" id="emaxCrown" value="emaxCrown">
-                          <label class="form-check-label" for="emaxCrown">E-max Crown</label>
+                          <input class="form-check-input" type="checkbox" name="workType" id="zirconCadcam" value="zirconCadcam">
+                          <label class="form-check-label" for="zirconCadcam">Zircon CAD/CAM</label>
+                        </div>
+                      </div>
+                      <div class="checkbox-group">
+                        <h4>Restoration Choice</h4>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" name="workType" id="fullCrown" value="fullCrown">
+                          <label class="form-check-label" for="fullCrown">Full Crown</label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="workType" id="estheticVeneer" value="estheticVeneer">
-                          <label class="form-check-label" for="estheticVeneer">Esthetic Veneer</label>
+                          <input class="form-check-input" type="checkbox" name="workType" id="layeringTechnique" value="layeringTechnique">
+                          <label class="form-check-label" for="layeringTechnique">Layering Technique</label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="workType" id="nonPrepVeneer" value="nonPrepVeneer">
-                          <label class="form-check-label" for="nonPrepVeneer">Non-Prep Veneer</label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="workType" id="emaxInlay" value="emaxInlay">
-                          <label class="form-check-label" for="emaxInlay">E-max / Inlay / Onlay</label>
+                          <input class="form-check-input" type="checkbox" name="workType" id="glassCeramic" value="glassCeramic">
+                          <label class="form-check-label" for="glassCeramic">Glass Ceramic</label>
                         </div>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="checkbox-group">
-                        <h4>Special Services</h4>
+                        <h4>Digital</h4>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="workType" id="customAbutment" value="customAbutment">
-                          <label class="form-check-label" for="customAbutment">Custom Made Abutment</label>
+                          <input class="form-check-input" type="checkbox" name="workType" id="smileDesign" value="smileDesign">
+                          <label class="form-check-label" for="smileDesign">Smile Design</label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="workType" id="cadcamScrew" value="cadcamScrew">
-                          <label class="form-check-label" for="cadcamScrew">CAD-CAM Screw Retain Crown</label>
+                          <input class="form-check-input" type="checkbox" name="workType" id="waxUp" value="waxUp">
+                          <label class="form-check-label" for="waxUp">Wax Up</label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="workType" id="bleachingTray" value="bleachingTray">
-                          <label class="form-check-label" for="bleachingTray">Bleaching Tray</label>
+                          <input class="form-check-input" type="checkbox" name="workType" id="3dPrinting" value="3dPrinting">
+                          <label class="form-check-label" for="3dPrinting">3D Printing</label>
+                        </div>
+                      </div>
+                      <div class="checkbox-group">
+                        <h4>Implant</h4>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" name="workType" id="cementRetained" value="cementRetained">
+                          <label class="form-check-label" for="cementRetained">Cement Retained</label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="workType" id="nightGuard" value="nightGuard">
-                          <label class="form-check-label" for="nightGuard">Night Guard</label>
+                          <input class="form-check-input" type="checkbox" name="workType" id="screwRetained" value="screwRetained">
+                          <label class="form-check-label" for="screwRetained">Screw Retained</label>
+                        </div>
+                      </div>
+                      <div class="checkbox-group">
+                        <h4>Implant Frame</h4>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" name="workType" id="peek" value="peek">
+                          <label class="form-check-label" for="peek">Peek</label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="workType" id="denture" value="denture">
-                          <label class="form-check-label" for="denture">Denture</label>
+                          <input class="form-check-input" type="checkbox" name="workType" id="titanium" value="titanium">
+                          <label class="form-check-label" for="titanium">Titanium</label>
+                        </div>
+                      </div>
+                      <div class="checkbox-group">
+                        <h4>Glaze</h4>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" name="workType" id="glossy" value="glossy">
+                          <label class="form-check-label" for="glossy">Glossy</label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="workType" id="partialDenture" value="partialDenture">
-                          <label class="form-check-label" for="partialDenture">Partial Denture</label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="workType" id="implant" value="implant">
-                          <label class="form-check-label" for="implant">Implant Restoration</label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" name="workType" id="bridge" value="bridge">
-                          <label class="form-check-label" for="bridge">Bridge</label>
+                          <input class="form-check-input" type="checkbox" name="workType" id="lightGlossy" value="lightGlossy">
+                          <label class="form-check-label" for="lightGlossy">Light Glossy</label>
                         </div>
                       </div>
                     </div>
@@ -283,7 +315,7 @@
                         <input type="text" id="shade" name="shade" class="form-control" placeholder="e.g. A3, A3.5...">
                       </div>
                     </div>
-                    <div class="col-md-4">
+                    <!-- <div class="col-md-4">
                       <div class="form-group">
                         <label for="stumpShade">Stump Shade</label>
                         <input type="text" id="stumpShade" name="stumpShade" class="form-control" placeholder="Stump shade">
@@ -294,12 +326,17 @@
                         <label for="gingShade">Ging. Shade</label>
                         <input type="text" id="gingShade" name="gingShade" class="form-control" placeholder="Gingival shade">
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                   
                   <!-- Teeth Numbers -->
                   <div class="teeth-selection">
-                    <h4>Teeth Numbers</h4>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                      <h4 class="text-left mb-0">Teeth Numbers</h4>
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#materialsModal">
+                        <i class="bi bi-box-seam"></i> Select Materials
+                      </button>
+                    </div>
                     <div class="teeth-grid">
                       <style>
                         .teeth-grid .form-check-input {
@@ -450,7 +487,7 @@
                 </div>
 
                 <!-- Preferences Section -->
-                <div class="form-section">
+                <!-- <div class="form-section">
                   <h3 class="section-title">PREFERENCES</h3>
                   <div class="row">
                     <div class="col-md-6">
@@ -492,7 +529,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
 
                 <!-- Job Description Section -->
                 <div class="form-section">
@@ -543,7 +580,7 @@
                   </div>
                   
                   <!-- File Categories -->
-                  <div class="row">
+                  <!-- <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="impressions">Impressions / Scans</label>
@@ -586,7 +623,7 @@
                         <small class="form-text text-muted">Any other relevant files</small>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                   
                   <!-- Upload Progress -->
                   <div class="upload-progress" id="uploadProgress" style="display: none;">
@@ -630,8 +667,8 @@
           <div class="footer-contact pt-3">
             <p>408 Dana Street</p>
             <p>Doha, Qatar</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+974 5076 5073</span></p>
-            <p><strong>Email:</strong> <span>info@microdentallab.com</span></p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+974 5076 5073 (Manager)<br>+974 5187 0007 (Lab)</span></p>
+            <p><strong>Email:</strong> <span>info@microdentaltech.com</span></p>
           </div>
           <div class="social-links d-flex mt-4">
             <a href="https://www.instagram.com/micro_dental_lab/" target="_blank" title="Follow us on X"><i class="bi bi-twitter-x"></i></a>
@@ -698,6 +735,182 @@
 
   <!-- Preloader -->
   <div id="preloader"></div>
+
+  <!-- Materials Selection Modal -->
+  <div class="modal fade" id="materialsModal" tabindex="-1" aria-labelledby="materialsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="materialsModalLabel">
+            <i class="bi bi-box-seam"></i> Select Materials
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="materials-selection">
+            
+            <!-- Zirconia Materials -->
+            <div class="material-category mb-4">
+              <h6 class="category-title"><i class="bi bi-gem"></i> Zirconia Materials</h6>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-check material-option">
+                    <input class="form-check-input" type="checkbox" name="materials" id="material-zircon-full" value="Zircon Full">
+                    <label class="form-check-label" for="material-zircon-full">
+                      <strong>Zircon Full</strong>
+                      <small class="d-block text-muted">Full contour zirconia restoration</small>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check material-option">
+                    <input class="form-check-input" type="checkbox" name="materials" id="material-zircon-layer" value="Zircon Layer">
+                    <label class="form-check-label" for="material-zircon-layer">
+                      <strong>Zircon Layer</strong>
+                      <small class="d-block text-muted">Layered zirconia with ceramic</small>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check material-option">
+                    <input class="form-check-input" type="checkbox" name="materials" id="material-zircon-over-implant" value="Zircon Over Implant">
+                    <label class="form-check-label" for="material-zircon-over-implant">
+                      <strong>Zircon Over Implant</strong>
+                      <small class="d-block text-muted">Zirconia crown for implant</small>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- E-Max Materials -->
+            <div class="material-category mb-4">
+              <h6 class="category-title"><i class="bi bi-droplet"></i> E-Max Materials</h6>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-check material-option">
+                    <input class="form-check-input" type="checkbox" name="materials" id="material-emax-crown" value="E-Max Crown">
+                    <label class="form-check-label" for="material-emax-crown">
+                      <strong>E-Max Crown</strong>
+                      <small class="d-block text-muted">Lithium disilicate crown</small>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check material-option">
+                    <input class="form-check-input" type="checkbox" name="materials" id="material-emax-veneer" value="E-Max Veneer">
+                    <label class="form-check-label" for="material-emax-veneer">
+                      <strong>E-Max Veneer</strong>
+                      <small class="d-block text-muted">Ultra-thin lithium disilicate veneer</small>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check material-option">
+                    <input class="form-check-input" type="checkbox" name="materials" id="material-emax-inlay" value="E-Max Inlay/Onlay">
+                    <label class="form-check-label" for="material-emax-inlay">
+                      <strong>E-Max Inlay/Onlay</strong>
+                      <small class="d-block text-muted">Conservative E-Max restoration</small>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feldspathic Materials -->
+            <div class="material-category mb-4">
+              <h6 class="category-title"><i class="bi bi-palette"></i> Feldspathic Materials</h6>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-check material-option">
+                    <input class="form-check-input" type="checkbox" name="materials" id="material-feldspathic" value="Feldspathic">
+                    <label class="form-check-label" for="material-feldspathic">
+                      <strong>Feldspathic</strong>
+                      <small class="d-block text-muted">Traditional porcelain restoration</small>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check material-option">
+                    <input class="form-check-input" type="checkbox" name="materials" id="material-glass-ceramic" value="Glass Ceramic">
+                    <label class="form-check-label" for="material-glass-ceramic">
+                      <strong>Glass Ceramic</strong>
+                      <small class="d-block text-muted">Premium glass ceramic material</small>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Implant Materials -->
+            <div class="material-category mb-4">
+              <h6 class="category-title"><i class="bi bi-tools"></i> Implant Materials</h6>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-check material-option">
+                    <input class="form-check-input" type="checkbox" name="materials" id="material-titanium" value="Titanium">
+                    <label class="form-check-label" for="material-titanium">
+                      <strong>Titanium</strong>
+                      <small class="d-block text-muted">Titanium implant framework</small>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check material-option">
+                    <input class="form-check-input" type="checkbox" name="materials" id="material-peek" value="Peek">
+                    <label class="form-check-label" for="material-peek">
+                      <strong>Peek</strong>
+                      <small class="d-block text-muted">Peek implant framework</small>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Digital Materials -->
+            <div class="material-category mb-4">
+              <h6 class="category-title"><i class="bi bi-cpu"></i> Digital Materials</h6>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-check material-option">
+                    <input class="form-check-input" type="checkbox" name="materials" id="material-cadcam" value="CAD/CAM">
+                    <label class="form-check-label" for="material-cadcam">
+                      <strong>CAD/CAM</strong>
+                      <small class="d-block text-muted">Digital design and manufacturing</small>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check material-option">
+                    <input class="form-check-input" type="checkbox" name="materials" id="material-3d-printing" value="3D Printing">
+                    <label class="form-check-label" for="material-3d-printing">
+                      <strong>3D Printing</strong>
+                      <small class="d-block text-muted">3D printed restorations</small>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Selected Materials Display -->
+            <div class="selected-materials-display mt-4 p-3 bg-light rounded">
+              <h6 class="mb-2"><i class="bi bi-check-circle"></i> Selected Materials:</h6>
+              <div id="selectedMaterialsList" class="selected-materials-list">
+                <span class="text-muted">No materials selected</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="saveMaterials()">
+            <i class="bi bi-check-lg"></i> Save Selection
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -1042,36 +1255,44 @@
         <body>
           <div class="container">
             <div class="header">
-              <h1>MicroDental Lab</h1>
+              <h1>MICRO Tech Dental Lab</h1>
               <h2>Job Order Form</h2>
-              <p>408 Dana Street, Doha, Qatar | Phone: +974 5076 5073 | Email: info@microdentallab.com</p>
+              <p>Qatar Doha - Abu hamour | Mobile: +974 518 70007 | TEL: +974 4463 1594 | Lab Manager: +974 51 8000 56 | Email: info@microdentaltech.com</p>
+            </div>
+            
+            <div class="section">
+              <h3>📋 Job Information</h3>
+              <div class="form-group">
+                <span class="label">Job Number:</span>
+                <span class="value">${data.jobNumber || 'Not specified'}</span>
+              </div>
+              <div class="form-group">
+                <span class="label">Patient's File No.:</span>
+                <span class="value">${data.patientFileNo || 'Not specified'}</span>
+              </div>
             </div>
             
             <div class="section schedule">
               <h3>📅 Schedule</h3>
               <div class="form-group">
-                <span class="label">Date In:</span>
-                <span class="value">${data.dateIn || 'Not specified'}</span>
+                <span class="label">Received Date:</span>
+                <span class="value">${data.receivedDate || 'Not specified'}</span>
               </div>
               <div class="form-group">
-                <span class="label">Date Out:</span>
-                <span class="value">${data.dateOut || 'Not specified'}</span>
-              </div>
-              <div class="form-group">
-                <span class="label">Time:</span>
-                <span class="value">${data.time || 'Not specified'}</span>
-              </div>
-              <div class="form-group">
-                <span class="label">Period:</span>
-                <span class="value">${data.period || 'Not specified'}</span>
+                <span class="label">Delivery Date:</span>
+                <span class="value">${data.deliveryDate || 'Not specified'}</span>
               </div>
             </div>
             
             <div class="section clinic-info">
               <h3>🏥 Clinic & Patient Information</h3>
               <div class="form-group">
-                <span class="label">Clinic/Dentist:</span>
-                <span class="value">${data.clinicName || 'Not specified'}</span>
+                <span class="label">Doctor Name:</span>
+                <span class="value">${data.doctorName || 'Not specified'}</span>
+              </div>
+              <div class="form-group">
+                <span class="label">Dental Center:</span>
+                <span class="value">${data.dentalCenter || 'Not specified'}</span>
               </div>
               <div class="form-group">
                 <span class="label">Telephone:</span>
@@ -1257,10 +1478,122 @@
       autoSaveTimer = setTimeout(autoSave, 2000);
     });
 
+    // Materials Selection Functions
+    function updateSelectedMaterialsDisplay() {
+      const checkboxes = document.querySelectorAll('#materialsModal input[name="materials"]:checked');
+      const selectedMaterialsList = document.getElementById('selectedMaterialsList');
+      
+      if (checkboxes.length === 0) {
+        selectedMaterialsList.innerHTML = '<span class="text-muted">No materials selected</span>';
+        return;
+      }
+      
+      const materials = Array.from(checkboxes).map(cb => cb.value);
+      selectedMaterialsList.innerHTML = materials.map(material => 
+        `<span class="badge bg-primary me-2 mb-2">${material}</span>`
+      ).join('');
+    }
+
+    function saveMaterials() {
+      const checkboxes = document.querySelectorAll('#materialsModal input[name="materials"]:checked');
+      const selectedMaterials = Array.from(checkboxes).map(cb => cb.value);
+      
+      // Store selected materials
+      localStorage.setItem('selectedMaterials', JSON.stringify(selectedMaterials));
+      
+      // Show notification
+      showNotification(`${selectedMaterials.length} material(s) selected successfully!`, 'success');
+      
+      // Close modal
+      const modal = bootstrap.Modal.getInstance(document.getElementById('materialsModal'));
+      if (modal) {
+        modal.hide();
+      }
+    }
+
+    function loadSelectedMaterials() {
+      const saved = localStorage.getItem('selectedMaterials');
+      if (saved) {
+        const materials = JSON.parse(saved);
+        materials.forEach(material => {
+          const checkbox = document.querySelector(`#materialsModal input[value="${material}"]`);
+          if (checkbox) {
+            checkbox.checked = true;
+          }
+        });
+        updateSelectedMaterialsDisplay();
+      }
+    }
+
+    // Equalize checkbox-group heights in WORK REQUESTED section
+    function equalizeCheckboxGroupHeights() {
+      // Find the WORK REQUESTED section by looking for section with title "WORK REQUESTED"
+      const sections = document.querySelectorAll('.form-section');
+      let workRequestedSection = null;
+      
+      sections.forEach(section => {
+        const title = section.querySelector('.section-title');
+        if (title && title.textContent.trim() === 'WORK REQUESTED') {
+          workRequestedSection = section;
+        }
+      });
+      
+      if (!workRequestedSection) return;
+      
+      // Find all checkbox-groups in WORK REQUESTED section
+      const checkboxGroups = workRequestedSection.querySelectorAll('.checkbox-group');
+      if (checkboxGroups.length === 0) return;
+      
+      // Reset heights to auto to get natural height
+      checkboxGroups.forEach(group => {
+        group.style.height = 'auto';
+      });
+      
+      // Find the maximum height
+      let maxHeight = 0;
+      checkboxGroups.forEach(group => {
+        const height = group.offsetHeight;
+        if (height > maxHeight) {
+          maxHeight = height;
+        }
+      });
+      
+      // Set all to the maximum height
+      checkboxGroups.forEach(group => {
+        group.style.height = maxHeight + 'px';
+      });
+    }
+
     // Initialize everything
     document.addEventListener('DOMContentLoaded', function() {
       loadDraft();
       initDragAndDrop();
+      loadSelectedMaterials();
+      
+      // Initialize materials modal
+      const materialsModal = document.getElementById('materialsModal');
+      if (materialsModal) {
+        // Update display when modal opens
+        materialsModal.addEventListener('show.bs.modal', function() {
+          updateSelectedMaterialsDisplay();
+        });
+        
+        // Listen for checkbox changes
+        const materialCheckboxes = materialsModal.querySelectorAll('input[name="materials"]');
+        materialCheckboxes.forEach(checkbox => {
+          checkbox.addEventListener('change', updateSelectedMaterialsDisplay);
+        });
+      }
+      
+      // Equalize checkbox group heights
+      equalizeCheckboxGroupHeights();
+      
+      // Re-equalize on window resize
+      let resizeTimer;
+      window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(equalizeCheckboxGroupHeights, 250);
+      });
       
       // Initialize AOS
       AOS.init({
@@ -1272,5 +1605,7 @@
   </script>
 
 </body>
+
+</html>
 
 </html>

@@ -169,6 +169,27 @@
   padding: 1.5rem;
   border-radius: 10px;
   border: 1px solid #e9ecef;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Make all checkbox groups in WORK REQUESTED section equal height */
+.form-section .row {
+  display: flex;
+}
+
+.form-section .row .col-md-6 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Make ALL checkbox groups have the same height across both columns - JavaScript will set equal heights */
+.form-section .row .col-md-6 .checkbox-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .checkbox-group h4 {
@@ -832,5 +853,66 @@
   color: #28a745;
   font-size: 0.875rem;
   margin-top: 0.25rem;
+}
+
+/* Materials Modal Styles */
+.material-category {
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 1rem;
+}
+
+.material-category:last-child {
+  border-bottom: none;
+}
+
+.category-title {
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(158, 107, 28, 0.2);
+}
+
+.material-option {
+  padding: 0.75rem;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.material-option:hover {
+  background: #ffffff;
+  border-color: var(--accent-color);
+  box-shadow: 0 2px 8px rgba(158, 107, 28, 0.1);
+}
+
+.material-option .form-check-input:checked ~ .form-check-label {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.material-option .form-check-input:checked {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.selected-materials-display {
+  border: 2px solid var(--accent-color);
+  background: #fff9f0 !important;
+}
+
+.selected-materials-list {
+  min-height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.selected-materials-list .badge {
+  font-size: 0.9rem;
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
 }
 
