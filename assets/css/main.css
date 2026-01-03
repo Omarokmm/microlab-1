@@ -14,30 +14,43 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Ubuntu",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Ubuntu", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #363f40; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #1f2f31; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #9e6b1c; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --secondary-color: #c69121; /* Secondary accent color for dental lab branding */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #363f40;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #1f2f31;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #9e6b1c;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --secondary-color: #c69121;
+  /* Secondary accent color for dental lab branding */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #363f40;  /* The default color of the main navmenu links */
-  --nav-hover-color: #9e6b1c; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #363f40; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #9e6b1c; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #363f40;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #9e6b1c;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #363f40;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #9e6b1c;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -1265,7 +1278,8 @@ section,
 @media (max-width: 768px) {
   .home-about .image-grid .secondary-images {
     flex-direction: row;
-    height: 180px;
+    height: 250px;
+    display: none !important;
   }
 }
 
@@ -2830,15 +2844,15 @@ section,
     padding: 80px 0;
     margin-bottom: 80px;
   }
-  
+
   .about .mission-section .row {
     margin: 0 -2rem;
   }
-  
+
   .about .mission-section .col-lg-4 {
     padding: 0 2rem;
   }
-  
+
   .about .mission-section .mission-item {
     padding: 2rem 1.5rem;
     background: rgba(255, 255, 255, 0.8);
@@ -2850,21 +2864,21 @@ section,
     flex-direction: column;
     justify-content: space-between;
   }
-  
+
   .about .mission-section .mission-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   }
-  
+
   .about .mission-section .mission-item .mission-icon {
     margin-bottom: 2.5rem;
   }
-  
+
   .about .mission-section .mission-item h4 {
     font-size: 1.5rem;
     margin-bottom: 1.8rem;
   }
-  
+
   .about .mission-section .mission-item p {
     font-size: 1.1rem;
     line-height: 1.8;
@@ -3266,28 +3280,28 @@ section,
     padding-left: 0;
     margin-top: 1.5rem;
   }
-  
+
   .home-about .image-grid {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     height: auto;
   }
-  
+
   .home-about .image-grid .primary-image {
     grid-row: 1;
     height: 250px;
   }
-  
+
   .home-about .image-grid .secondary-images {
     flex-direction: row;
     grid-row: 2;
   }
-  
+
   .home-about .content-wrapper .metrics-row {
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .home-about .content-wrapper .action-buttons {
     flex-direction: column;
   }
@@ -3297,21 +3311,21 @@ section,
   .home-about .image-grid {
     height: 300px;
   }
-  
+
   .home-about .image-grid .primary-image {
-    height: 180px;
+    height: 250px;
   }
-  
+
   .home-about .image-grid .secondary-images {
     flex-direction: column;
   }
-  
+
   .home-about .content-wrapper .highlight-box {
     flex-direction: column;
     text-align: center;
     padding: 0.75rem;
   }
-  
+
   .home-about .content-wrapper .metrics-row {
     flex-direction: column;
     gap: 1rem;
@@ -3322,15 +3336,15 @@ section,
   .home-about .image-grid {
     height: 250px;
   }
-  
+
   .home-about .image-grid .primary-image {
-    height: 150px;
+    height: 250px;
   }
-  
+
   .home-about .content-wrapper .highlight-box {
     padding: 0.5rem;
   }
-  
+
   .home-about .content-wrapper .feature-list .feature-item {
     margin-bottom: 0.75rem;
   }
@@ -3367,7 +3381,7 @@ section,
 
   .about .image-gallery .secondary-images .secondary-image {
     width: 100%;
-    height: 180px;
+    height: 250px;
   }
 
   .about .mission-section .mission-item {
@@ -7236,19 +7250,19 @@ section,
     gap: 20px;
     margin-top: 30px;
   }
-  
+
   .service-card-modern {
     margin-bottom: 20px;
   }
-  
+
   .service-content-modern {
     padding: 20px;
   }
-  
+
   .service-content-modern h3 {
     font-size: 20px;
   }
-  
+
   .service-image-modern {
     height: 180px;
     margin: 15px 20px 0;
@@ -7260,35 +7274,35 @@ section,
     grid-template-columns: 1fr;
     gap: 15px;
   }
-  
+
   .service-card-header {
     padding: 15px 20px 0;
   }
-  
+
   .service-icon-modern {
     width: 45px;
     height: 45px;
     font-size: 18px;
   }
-  
+
   .service-badge-modern {
     padding: 6px 12px;
     font-size: 11px;
   }
-  
+
   .service-image-modern {
     height: 160px;
     margin: 15px 20px 0;
   }
-  
+
   .service-content-modern {
     padding: 15px;
   }
-  
+
   .service-content-modern h3 {
     font-size: 18px;
   }
-  
+
   .service-btn-modern {
     padding: 10px 20px;
     font-size: 13px;
@@ -7321,17 +7335,17 @@ body {
     --heading-color: #1f2f31 !important;
     --contrast-color: #ffffff !important;
   }
-  
+
   body {
     background-color: #ffffff !important;
     color: #363f40 !important;
   }
-  
+
   .light-background {
     --background-color: #f7f9f9 !important;
     --surface-color: #ffffff !important;
   }
-  
+
   .dark-background {
     --background-color: #ffffff !important;
     --surface-color: #ffffff !important;
@@ -7352,7 +7366,7 @@ body {
     text-align: left !important;
     padding-left: 0 !important;
   }
-  
+
   .feature-item {
     display: flex;
     align-items: flex-start;
@@ -7360,18 +7374,18 @@ body {
     text-align: left;
     padding-left: 0;
   }
-  
+
   .feature-icon {
     margin-right: 0.75rem;
     margin-top: 0.125rem;
     flex-shrink: 0;
   }
-  
+
   .feature-icon i {
     color: var(--accent-color);
     font-size: 1.1rem;
   }
-  
+
   .feature-text {
     text-align: left;
     font-size: 0.9rem;
@@ -7386,20 +7400,20 @@ body {
     margin-left: 0;
     padding-left: 0;
   }
-  
+
   .feature-item {
     margin-bottom: 0.75rem;
     padding-left: 0;
   }
-  
+
   .feature-icon {
     margin-right: 0.5rem;
   }
-  
+
   .feature-icon i {
     font-size: 1rem;
   }
-  
+
   .feature-text {
     font-size: 0.85rem;
     line-height: 1.3;
@@ -7422,46 +7436,46 @@ body {
   .services .modern-card {
     margin-bottom: 30px;
   }
-  
+
   .services .modern-card .service-header {
     padding: 20px 20px 0;
   }
-  
+
   .services .modern-card .service-icon-wrapper {
     width: 50px;
     height: 50px;
   }
-  
+
   .services .modern-card .service-icon {
     font-size: 20px;
   }
-  
+
   .services .modern-card .service-image-container {
     height: 180px;
     margin: 15px 20px 0;
   }
-  
+
   .services .modern-card .service-content {
     padding: 20px;
   }
-  
+
   .services .modern-card .service-title {
     font-size: 18px;
   }
-  
+
   .services .modern-card .service-description {
     font-size: 13px;
   }
-  
+
   .services .modern-card .service-features {
     gap: 6px;
   }
-  
+
   .services .modern-card .feature-tag {
     font-size: 10px;
     padding: 3px 8px;
   }
-  
+
   .services .modern-card .service-btn {
     padding: 10px 20px;
     font-size: 13px;
@@ -7472,33 +7486,33 @@ body {
   .services .modern-card .service-header {
     padding: 15px 15px 0;
   }
-  
+
   .services .modern-card .service-icon-wrapper {
     width: 45px;
     height: 45px;
   }
-  
+
   .services .modern-card .service-icon {
     font-size: 18px;
   }
-  
+
   .services .modern-card .service-image-container {
     height: 160px;
     margin: 10px 15px 0;
   }
-  
+
   .services .modern-card .service-content {
     padding: 15px;
   }
-  
+
   .services .modern-card .service-title {
     font-size: 16px;
   }
-  
+
   .services .modern-card .service-description {
     font-size: 12px;
   }
-  
+
   .services .modern-card .service-btn {
     padding: 8px 16px;
     font-size: 12px;
@@ -7566,19 +7580,19 @@ body {
   .certification-badge-large {
     padding: 15px;
   }
-  
+
   .certification-badge-large i {
     font-size: 2rem;
   }
-  
+
   .certification-badge-large h5 {
     font-size: 1rem;
   }
-  
+
   .certification-badge-large p {
     font-size: 0.8rem;
   }
-  
+
   .accreditation-grid {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 15px;
@@ -7589,19 +7603,19 @@ body {
   .certification-badge-large {
     padding: 12px;
   }
-  
+
   .certification-badge-large i {
     font-size: 1.5rem;
   }
-  
+
   .certification-badge-large h5 {
     font-size: 0.9rem;
   }
-  
+
   .certification-badge-large p {
     font-size: 0.7rem;
   }
-  
+
   .accreditation-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -7838,43 +7852,43 @@ body {
     height: auto;
     gap: 15px;
   }
-  
+
   .primary-image {
     grid-row: 1;
     height: 300px;
   }
-  
+
   .secondary-images {
     flex-direction: row;
     grid-row: 2;
   }
-  
+
   .small-image {
     flex: 1;
     height: 150px;
   }
-  
+
   .content-wrapper {
     padding-left: 0;
     padding-top: 30px;
   }
-  
+
   .highlight-box {
     padding: 20px;
   }
-  
+
   .metrics-row {
     gap: 20px;
   }
-  
+
   .metric-number {
     font-size: 2rem;
   }
-  
+
   .action-buttons {
     flex-direction: column;
   }
-  
+
   .btn-explore,
   .btn-contact {
     text-align: center;
@@ -7886,30 +7900,30 @@ body {
   .image-grid {
     gap: 10px;
   }
-  
+
   .primary-image {
     height: 250px;
   }
-  
+
   .small-image {
     height: 120px;
   }
-  
+
   .highlight-box {
     padding: 15px;
     flex-direction: column;
     text-align: center;
   }
-  
+
   .highlight-icon {
     align-self: center;
   }
-  
+
   .metrics-row {
     flex-direction: column;
     gap: 15px;
   }
-  
+
   .certification-badge {
     top: 15px;
     right: 15px;
