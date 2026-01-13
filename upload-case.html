@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="color-scheme" content="light only">
+  <meta name="theme-color" content="#ffffff">
+  <title>Upload Case Files - Micro Dental Lab</title>
+  <meta name="description"
+    content="Upload your dental case files and submit job orders to Micro Dental Lab for precision dental restorations.">
+  <meta name="keywords" content="dental lab, upload case, job order, dental restorations, crowns, bridges">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/upload-form.css" rel="stylesheet">
+</head>
+
+<body class="upload-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <h1 class="sitename"><span style="color: #c84a00;">Micro</span><span style="color: #000;">Dental Lab</span></h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="upload-case.html" class="active">Upload Case</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+    <!-- Upload Case Section -->
+    <section id="upload-case" class="upload-case section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="upload-form-container">
+
+              <!-- Form Header -->
+              <div class="form-header">
+                <div class="header-left">
+                  <div class="logo-section">
+                    <div class="logo-icon">
+                      <i class="fas fa-tooth"></i>
+                    </div>
+                    <div class="logo-text">
+                      <h2>MICRO Tech Dental Lab</h2>
+                      <p>Job Order Form</p>
+                    </div>
+                  </div>
+                  <div class="contact-info">
+                    <p><strong>Address:</strong> Qatar Doha - Abu hamour</p>
+                    <p><strong>Mobile:</strong> +974 518 70007</p>
+                    <p><strong>TEL:</strong> +974 4463 1594 | <strong>Lab Manager:</strong> +974 51 8000 56</p>
+                    <p><strong>Email:</strong> <a href="mailto:info@microdentaltech.com">info@microdentaltech.com</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="header-right">
+                  <button type="button" class="btn btn-outline-primary" onclick="exportPDF()">
+                    <i class="bi bi-file-earmark-pdf"></i> Export PDF
+                  </button>
+                  <button type="button" class="btn btn-outline-secondary" onclick="resetForm()">
+                    <i class="bi bi-arrow-clockwise"></i> Reset
+                  </button>
+                </div>
+              </div>
+
+              <!-- Main Form -->
+              <form id="dentalJobForm" class="dental-job-form">
+
+                <!-- Job & Patient File Section -->
+                <div class="form-section">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="jobNumber">Job Number</label>
+                        <input type="text" id="jobNumber" name="jobNumber" class="form-control"
+                          placeholder="Job Number">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="patientFileNo">Patient's File No.</label>
+                        <input type="text" id="patientFileNo" name="patientFileNo" class="form-control"
+                          placeholder="Patient's File No.">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Schedule Section -->
+                <div class="form-section">
+                  <h3 class="section-title">SCHEDULE</h3>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="receivedDate">Received Date (DD/MM/20YY)</label>
+                        <input type="text" id="receivedDate" name="receivedDate" class="form-control"
+                          placeholder="DD/MM/20YY" pattern="\d{2}/\d{2}/20\d{2}">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="deliveryDate">Delivery Date (DD/MM/20YY)</label>
+                        <input type="text" id="deliveryDate" name="deliveryDate" class="form-control"
+                          placeholder="DD/MM/20YY" pattern="\d{2}/\d{2}/20\d{2}">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Clinic & Patient Section -->
+                <div class="form-section">
+                  <h3 class="section-title">CLINIC & PATIENT</h3>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="doctorName">Doctor Name</label>
+                        <input type="text" id="doctorName" name="doctorName" class="form-control"
+                          placeholder="Doctor Name" required>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="dentalCenter">Dental Center</label>
+                        <input type="text" id="dentalCenter" name="dentalCenter" class="form-control"
+                          placeholder="Dental Center">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="telephone">Telephone</label>
+                      <input type="tel" id="telephone" name="telephone" class="form-control"
+                        placeholder="+1 (555) 123-4567">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="address">Address</label>
+                      <textarea id="address" name="address" class="form-control" rows="2"
+                        placeholder="Clinic address"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="patientName">Patient's Name</label>
+                      <input type="text" id="patientName" name="patientName" class="form-control"
+                        placeholder="Patient Name" required>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>Gender</label>
+                      <div class="radio-group d-flex flex-row gap-3">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                          <label class="form-check-label" for="male">Male</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                          <label class="form-check-label" for="female">Female</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label for="age">Age</label>
+                      <input type="number" id="age" name="age" class="form-control" placeholder="Age" min="1" max="120">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label for="mobile">Mobile</label>
+                      <input type="tel" id="mobile" name="mobile" class="form-control" placeholder="+1 (555) 987-6543">
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Work Requested Section -->
+            <div class="form-section">
+              <h3 class="section-title">WORK REQUESTED</h3>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="checkbox-group">
+                    <h4>Fixed Prosthesis</h4>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="workType" id="crown" value="crown">
+                      <label class="form-check-label" for="crown">Crown</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="workType" id="bridge" value="bridge">
+                      <label class="form-check-label" for="bridge">Bridge</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="workType" id="veneer" value="veneer">
+                      <label class="form-check-label" for="veneer">Veneer</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="workType" id="inlayOnlay"
+                        value="inlayOnlay">
+                      <label class="form-check-label" for="inlayOnlay">Inlay/onlay</label>
+                    </div>
+                  </div>
+                  <div class="checkbox-group">
+                    <h4>Dental Restoration</h4>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="workType" id="emaxIpsImpress"
+                        value="emaxIpsImpress">
+                      <label class="form-check-label" for="emaxIpsImpress">Emax IPS Impress</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="workType" id="zirconCadcam"
+                        value="zirconCadcam">
+                      <label class="form-check-label" for="zirconCadcam">Zircon CAD/CAM</label>
+                    </div>
+                  </div>
+                  <div class="checkbox-group">
+                    <h4>Restoration Choice</h4>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="workType" id="fullCrown" value="fullCrown">
+                      <label class="form-check-label" for="fullCrown">Full Crown</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="workType" id="layeringTechnique"
+                        value="layeringTechnique">
+                      <label class="form-check-label" for="layeringTechnique">Layering Technique</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="workType" id="glassCeramic"
+                        value="glassCeramic">
+                      <label class="form-check-label" for="glassCeramic">Glass Ceramic</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="checkbox-group">
+                    <h4>Digital</h4>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="workType" id="smileDesign"
+                        value="smileDesign">
+                      <label class="form-check-label" for="smileDesign">Smile Design</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="workType" id="waxUp" value="waxUp">
+                      <label class="form-check-label" for="waxUp">Wax Up</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="workType" id="3dPrinting"
+                        value="3dPrinting">
+                      <label class="form-check-label" for="3dPrinting">3D Printing</label>
+                    </div>
+                  </div>
+                  <div class="checkbox-group">
+                    <h4>Implant</h4>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="workType" id="cementRetained"
+                        value="cementRetained">
+                      <label class="form-check-label" for="cementRetained">Cement Retained</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="workType" id="screwRetained"
+                        value="screwRetained">
+                      <label class="form-check-label" for="screwRetained">Screw Retained</label>
+                    </div>
+                  </div>
+                  <div class="checkbox-group">
+                    <h4>Implant Frame</h4>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="workType" id="peek" value="peek">
+                      <label class="form-check-label" for="peek">Peek</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="workType" id="titanium" value="titanium">
+                      <label class="form-check-label" for="titanium">Titanium</label>
+                    </div>
+                  </div>
+                  <div class="checkbox-group">
+                    <h4>Glaze</h4>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="workType" id="glossy" value="glossy">
+                      <label class="form-check-label" for="glossy">Glossy</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="workType" id="lightGlossy"
+                        value="lightGlossy">
+                      <label class="form-check-label" for="lightGlossy">Light Glossy</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Shade & Teeth Section -->
+            <div class="form-section">
+              <h3 class="section-title">SHADE & TEETH</h3>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label for="shade">Shade</label>
+                    <input type="text" id="shade" name="shade" class="form-control" placeholder="e.g. A3, A3.5...">
+                  </div>
+                </div>
+                <!-- <div class="col-md-4">
+                      <div class="form-group">
+                        <label for="stumpShade">Stump Shade</label>
+                        <input type="text" id="stumpShade" name="stumpShade" class="form-control" placeholder="Stump shade">
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <label for="gingShade">Ging. Shade</label>
+                        <input type="text" id="gingShade" name="gingShade" class="form-control" placeholder="Gingival shade">
+                      </div>
+                    </div> -->
+              </div>
+
+              <!-- Teeth Numbers -->
+              <div class="teeth-selection">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h4 class="text-left mb-0">Teeth Numbers</h4>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#materialsModal">
+                    <i class="bi bi-box-seam"></i> Select Materials
+                  </button>
+                </div>
+                <div class="teeth-grid">
+                  <style>
+                    .teeth-grid .form-check-input {
+                      display: none;
+                    }
+                  </style>
+                  <div class="teeth-row upper-arch">
+                    <div class="teeth-label">Upper Arch</div>
+                    <div class="teeth-checkboxes">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth18" value="18">
+                        <label class="form-check-label" for="tooth18">18</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth17" value="17">
+                        <label class="form-check-label" for="tooth17">17</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth16" value="16">
+                        <label class="form-check-label" for="tooth16">16</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth15" value="15">
+                        <label class="form-check-label" for="tooth15">15</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth14" value="14">
+                        <label class="form-check-label" for="tooth14">14</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth13" value="13">
+                        <label class="form-check-label" for="tooth13">13</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth12" value="12">
+                        <label class="form-check-label" for="tooth12">12</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth11" value="11">
+                        <label class="form-check-label" for="tooth11">11</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth21" value="21">
+                        <label class="form-check-label" for="tooth21">21</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth22" value="22">
+                        <label class="form-check-label" for="tooth22">22</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth23" value="23">
+                        <label class="form-check-label" for="tooth23">23</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth24" value="24">
+                        <label class="form-check-label" for="tooth24">24</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth25" value="25">
+                        <label class="form-check-label" for="tooth25">25</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth26" value="26">
+                        <label class="form-check-label" for="tooth26">26</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth27" value="27">
+                        <label class="form-check-label" for="tooth27">27</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth28" value="28">
+                        <label class="form-check-label" for="tooth28">28</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="teeth-row lower-arch">
+                    <div class="teeth-label">Lower Arch</div>
+                    <div class="teeth-checkboxes">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth48" value="48">
+                        <label class="form-check-label" for="tooth48">48</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth47" value="47">
+                        <label class="form-check-label" for="tooth47">47</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth46" value="46">
+                        <label class="form-check-label" for="tooth46">46</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth45" value="45">
+                        <label class="form-check-label" for="tooth45">45</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth44" value="44">
+                        <label class="form-check-label" for="tooth44">44</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth43" value="43">
+                        <label class="form-check-label" for="tooth43">43</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth42" value="42">
+                        <label class="form-check-label" for="tooth42">42</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth41" value="41">
+                        <label class="form-check-label" for="tooth41">41</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth31" value="31">
+                        <label class="form-check-label" for="tooth31">31</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth32" value="32">
+                        <label class="form-check-label" for="tooth32">32</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth33" value="33">
+                        <label class="form-check-label" for="tooth33">33</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth34" value="34">
+                        <label class="form-check-label" for="tooth34">34</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth35" value="35">
+                        <label class="form-check-label" for="tooth35">35</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth36" value="36">
+                        <label class="form-check-label" for="tooth36">36</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth37" value="37">
+                        <label class="form-check-label" for="tooth37">37</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" name="teeth" id="tooth38" value="38">
+                        <label class="form-check-label" for="tooth38">38</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Preferences Section -->
+            <!-- <div class="form-section">
+                  <h3 class="section-title">PREFERENCES</h3>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Occlusal Staining</label>
+                        <div class="radio-group">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="occlusalStaining" id="stainingNon" value="non">
+                            <label class="form-check-label" for="stainingNon">Non</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="occlusalStaining" id="stainingLight" value="light">
+                            <label class="form-check-label" for="stainingLight">Light</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="occlusalStaining" id="stainingDark" value="dark">
+                            <label class="form-check-label" for="stainingDark">Dark</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Texture</label>
+                        <div class="radio-group">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="texture" id="textureSmooth" value="smooth">
+                            <label class="form-check-label" for="textureSmooth">Smooth</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="texture" id="textureModerate" value="moderate">
+                            <label class="form-check-label" for="textureModerate">Moderate</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="texture" id="textureHeavy" value="heavy">
+                            <label class="form-check-label" for="textureHeavy">Heavy</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> -->
+
+            <!-- Job Description Section -->
+            <div class="form-section">
+              <h3 class="section-title">JOB DESCRIPTION</h3>
+              <div class="form-group">
+                <label for="jobDescription">Details</label>
+                <div class="rich-text-toolbar">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick="formatText('bold')">
+                    <i class="bi bi-type-bold"></i>
+                  </button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick="formatText('italic')">
+                    <i class="bi bi-type-italic"></i>
+                  </button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick="formatText('underline')">
+                    <i class="bi bi-type-underline"></i>
+                  </button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick="formatText('bulletList')">
+                    <i class="bi bi-list-ul"></i>
+                  </button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" onclick="formatText('numberList')">
+                    <i class="bi bi-list-ol"></i>
+                  </button>
+                </div>
+                <textarea id="jobDescription" name="jobDescription" class="form-control rich-text-area" rows="6"
+                  placeholder="Write all details here..."></textarea>
+              </div>
+            </div>
+
+            <!-- File Upload Section -->
+            <div class="form-section">
+              <h3 class="section-title">FILE UPLOAD</h3>
+
+              <!-- Drag and Drop Zone -->
+              <div class="drag-drop-zone" id="dragDropZone">
+                <div class="drag-drop-content">
+                  <i class="bi bi-cloud-upload"></i>
+                  <h4>Drag & Drop Files Here</h4>
+                  <p>or click to browse files</p>
+                  <div class="file-types">
+                    <span class="file-type-badge">STL</span>
+                    <span class="file-type-badge">PLY</span>
+                    <span class="file-type-badge">OBJ</span>
+                    <span class="file-type-badge">JPG</span>
+                    <span class="file-type-badge">PNG</span>
+                    <span class="file-type-badge">PDF</span>
+                  </div>
+                </div>
+                <input type="file" id="dragDropInput" multiple style="display: none;">
+              </div>
+
+              <!-- File Categories -->
+              <!-- <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="impressions">Impressions / Scans</label>
+                        <div class="file-upload-wrapper">
+                          <input type="file" id="impressions" name="impressions" class="form-control file-input" multiple accept=".stl,.ply,.obj,.zip">
+                          <div class="file-preview" id="impressionsPreview"></div>
+                        </div>
+                        <small class="form-text text-muted">Upload STL, PLY, OBJ files or ZIP archives</small>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="photos">Photos</label>
+                        <div class="file-upload-wrapper">
+                          <input type="file" id="photos" name="photos" class="form-control file-input" multiple accept="image/*">
+                          <div class="file-preview" id="photosPreview"></div>
+                        </div>
+                        <small class="form-text text-muted">Upload JPG, PNG, or other image files</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="prescription">Prescription / Instructions</label>
+                        <div class="file-upload-wrapper">
+                          <input type="file" id="prescription" name="prescription" class="form-control file-input" accept=".pdf,.doc,.docx,.txt">
+                          <div class="file-preview" id="prescriptionPreview"></div>
+                        </div>
+                        <small class="form-text text-muted">Upload PDF, DOC, or TXT files</small>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="additionalFiles">Additional Files</label>
+                        <div class="file-upload-wrapper">
+                          <input type="file" id="additionalFiles" name="additionalFiles" class="form-control file-input" multiple>
+                          <div class="file-preview" id="additionalFilesPreview"></div>
+                        </div>
+                        <small class="form-text text-muted">Any other relevant files</small>
+                      </div>
+                    </div>
+                  </div> -->
+
+              <!-- Upload Progress -->
+              <div class="upload-progress" id="uploadProgress" style="display: none;">
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+                </div>
+                <div class="progress-text">Uploading files...</div>
+              </div>
+            </div>
+
+            <!-- Submit Section -->
+            <div class="form-section submit-section">
+              <div class="row">
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn btn-primary btn-lg">
+                    <i class="bi bi-upload"></i> Submit Case
+                  </button>
+                  <button type="button" class="btn btn-outline-secondary btn-lg ms-3" onclick="saveDraft()">
+                    <i class="bi bi-save"></i> Save Draft
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer position-relative">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename"><span style="color: #c84a00;">Micro</span><span style="color: #000;">Dental
+                Lab</span></span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>408 Dana Street</p>
+            <p>Doha, Qatar</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+974 5076 5073 (Manager)<br>+974 5187 0007 (Lab)</span></p>
+            <p><strong>Email:</strong> <span><a
+                  href="mailto:info@microdentaltech.com">info@microdentaltech.com</a></span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href="https://www.instagram.com/micro_dental_lab/" target="_blank" title="Follow us on X"><i
+                class="bi bi-twitter-x"></i></a>
+            <a href="https://www.instagram.com/micro_dental_lab/" target="_blank" title="Follow us on Facebook"><i
+                class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/micro_dental_lab/" target="_blank" title="Follow us on Instagram"><i
+                class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <!-- <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li> -->
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="services.html">Crowns & Bridges</a></li>
+            <li><a href="services.html">Dental Implants</a></li>
+            <!-- <li><a href="services.html">Dentures</a></li> -->
+            <li><a href="services.html">Veneers</a></li>
+            <li><a href="services.html">CAD/CAM</a></li>
+          </ul>
+        </div>
+
+        <!-- <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Materials</h4>
+          <ul>
+            <li><a href="#">Porcelain</a></li>
+            <li><a href="#">Zirconia</a></li>
+            <li><a href="#">Gold Alloys</a></li>
+            <li><a href="#">Acrylic</a></li>
+            <li><a href="#">Composite</a></li>
+          </ul>
+        </div> -->
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a
+                href="https://wa.me/97450765073?text=Hi,Could you please provide me with Order Tracking details?">Order
+                Tracking</a></li>
+            <li><a
+                href="https://wa.me/97450765073?text=Hi, Could you please provide me with Training details?">Training</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong>MicroDental Lab</strong>&nbsp;<span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Materials Selection Modal -->
+  <div class="modal fade" id="materialsModal" tabindex="-1" aria-labelledby="materialsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="materialsModalLabel">
+            <i class="bi bi-box-seam"></i> Select Materials
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="materials-selection">
+
+            <!-- Zirconia Materials -->
+            <div class="material-category mb-4">
+              <h6 class="category-title"><i class="bi bi-gem"></i> Zirconia Materials</h6>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-check material-option">
+                    <input class="form-check-input" type="checkbox" name="materials" id="material-zircon-full"
+                      value="Zircon Full">
+                    <label class="form-check-label" for="material-zircon-full">
+                      <strong>Zircon Full</strong>
+                      <small class="d-block text-muted">Full contour zirconia restoration</small>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check material-option">
+                    <input class="form-check-input" type="checkbox" name="materials" id="material-zircon-layer"
+                      value="Zircon Layer">
+                    <label class="form-check-label" for="material-zircon-layer">
+                      <strong>Zircon Layer</strong>
+                      <small class="d-block text-muted">Layered zirconia with ceramic</small>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check material-option">
+                    <input class="form-check-input" type="checkbox" name="materials" id="material-zircon-over-implant"
+                      value="Zircon Over Implant">
+                    <label class="form-check-label" for="material-zircon-over-implant">
+                      <strong>Zircon Over Implant</strong>
+                      <small class="d-block text-muted">Zirconia crown for implant</small>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- E-Max Materials -->
+            <div class="material-category mb-4">
+              <h6 class="category-title"><i class="bi bi-droplet"></i> E-Max Materials</h6>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-check material-option">
+                    <input class="form-check-input" type="checkbox" name="materials" id="material-emax-crown"
+                      value="E-Max Crown">
+                    <label class="form-check-label" for="material-emax-crown">
+                      <strong>E-Max Crown</strong>
+                      <small class="d-block text-muted">Lithium disilicate crown</small>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check material-option">
+                    <input class="form-check-input" type="checkbox" name="materials" id="material-emax-veneer"
+                      value="E-Max Veneer">
+                    <label class="form-check-label" for="material-emax-veneer">
+                      <strong>E-Max Veneer</strong>
+                      <small class="d-block text-muted">Ultra-thin lithium disilicate veneer</small>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check material-option">
+                    <input class="form-check-input" type="checkbox" name="materials" id="material-emax-inlay"
+                      value="E-Max Inlay/Onlay">
+                    <label class="form-check-label" for="material-emax-inlay">
+                      <strong>E-Max Inlay/Onlay</strong>
+                      <small class="d-block text-muted">Conservative E-Max restoration</small>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feldspathic Materials -->
+            <div class="material-category mb-4">
+              <h6 class="category-title"><i class="bi bi-palette"></i> Feldspathic Materials</h6>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-check material-option">
+                    <input class="form-check-input" type="checkbox" name="materials" id="material-feldspathic"
+                      value="Feldspathic">
+                    <label class="form-check-label" for="material-feldspathic">
+                      <strong>Feldspathic</strong>
+                      <small class="d-block text-muted">Traditional porcelain restoration</small>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check material-option">
+                    <input class="form-check-input" type="checkbox" name="materials" id="material-glass-ceramic"
+                      value="Glass Ceramic">
+                    <label class="form-check-label" for="material-glass-ceramic">
+                      <strong>Glass Ceramic</strong>
+                      <small class="d-block text-muted">Premium glass ceramic material</small>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Implant Materials -->
+            <div class="material-category mb-4">
+              <h6 class="category-title"><i class="bi bi-tools"></i> Implant Materials</h6>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-check material-option">
+                    <input class="form-check-input" type="checkbox" name="materials" id="material-titanium"
+                      value="Titanium">
+                    <label class="form-check-label" for="material-titanium">
+                      <strong>Titanium</strong>
+                      <small class="d-block text-muted">Titanium implant framework</small>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check material-option">
+                    <input class="form-check-input" type="checkbox" name="materials" id="material-peek" value="Peek">
+                    <label class="form-check-label" for="material-peek">
+                      <strong>Peek</strong>
+                      <small class="d-block text-muted">Peek implant framework</small>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Digital Materials -->
+            <div class="material-category mb-4">
+              <h6 class="category-title"><i class="bi bi-cpu"></i> Digital Materials</h6>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-check material-option">
+                    <input class="form-check-input" type="checkbox" name="materials" id="material-cadcam"
+                      value="CAD/CAM">
+                    <label class="form-check-label" for="material-cadcam">
+                      <strong>CAD/CAM</strong>
+                      <small class="d-block text-muted">Digital design and manufacturing</small>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-check material-option">
+                    <input class="form-check-input" type="checkbox" name="materials" id="material-3d-printing"
+                      value="3D Printing">
+                    <label class="form-check-label" for="material-3d-printing">
+                      <strong>3D Printing</strong>
+                      <small class="d-block text-muted">3D printed restorations</small>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Selected Materials Display -->
+            <div class="selected-materials-display mt-4 p-3 bg-light rounded">
+              <h6 class="mb-2"><i class="bi bi-check-circle"></i> Selected Materials:</h6>
+              <div id="selectedMaterialsList" class="selected-materials-list">
+                <span class="text-muted">No materials selected</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="saveMaterials()">
+            <i class="bi bi-check-lg"></i> Save Selection
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    // Enhanced Form functionality
+    let autoSaveTimer;
+    let uploadedFiles = {
+      impressions: [],
+      photos: [],
+      prescription: [],
+      additionalFiles: []
+    };
+
+    // Auto-save functionality
+    function autoSave() {
+      const formData = new FormData(document.getElementById('dentalJobForm'));
+      const data = Object.fromEntries(formData);
+      localStorage.setItem('dentalLabDraft', JSON.stringify(data));
+      showNotification('Draft auto-saved', 'success');
+    }
+
+    // Load saved draft
+    function loadDraft() {
+      const savedDraft = localStorage.getItem('dentalLabDraft');
+      if (savedDraft) {
+        const data = JSON.parse(savedDraft);
+        Object.keys(data).forEach(key => {
+          const element = document.querySelector(`[name="${key}"]`);
+          if (element) {
+            if (element.type === 'checkbox' || element.type === 'radio') {
+              element.checked = data[key];
+            } else {
+              element.value = data[key];
+            }
+          }
+        });
+        showNotification('Draft loaded', 'info');
+      }
+    }
+
+    // Notification system
+    function showNotification(message, type = 'info') {
+      const notification = document.createElement('div');
+      notification.className = `notification notification-${type}`;
+      notification.innerHTML = `
+        <i class="bi bi-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i>
+        <span>${message}</span>
+      `;
+
+      document.body.appendChild(notification);
+
+      setTimeout(() => {
+        notification.classList.add('show');
+      }, 100);
+
+      setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => notification.remove(), 300);
+      }, 3000);
+    }
+
+    // Drag and drop functionality
+    function initDragAndDrop() {
+      const dragDropZone = document.getElementById('dragDropZone');
+      const dragDropInput = document.getElementById('dragDropInput');
+
+      dragDropZone.addEventListener('click', () => dragDropInput.click());
+      dragDropInput.addEventListener('change', handleFileSelect);
+
+      dragDropZone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        dragDropZone.classList.add('dragover');
+      });
+
+      dragDropZone.addEventListener('dragleave', () => {
+        dragDropZone.classList.remove('dragover');
+      });
+
+      dragDropZone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dragDropZone.classList.remove('dragover');
+        handleFileSelect({ target: { files: e.dataTransfer.files } });
+      });
+    }
+
+    // File handling
+    function handleFileSelect(event) {
+      const files = Array.from(event.target.files);
+      files.forEach(file => {
+        const category = determineFileCategory(file);
+        uploadedFiles[category].push(file);
+        displayFilePreview(file, category);
+      });
+      showNotification(`${files.length} file(s) added`, 'success');
+    }
+
+    function determineFileCategory(file) {
+      const extension = file.name.split('.').pop().toLowerCase();
+      if (['stl', 'ply', 'obj', 'zip'].includes(extension)) {
+        return 'impressions';
+      } else if (['jpg', 'jpeg', 'png', 'gif', 'bmp'].includes(extension)) {
+        return 'photos';
+      } else if (['pdf', 'doc', 'docx', 'txt'].includes(extension)) {
+        return 'prescription';
+      } else {
+        return 'additionalFiles';
+      }
+    }
+
+    function displayFilePreview(file, category) {
+      const previewContainer = document.getElementById(`${category}Preview`);
+      const fileItem = document.createElement('div');
+      fileItem.className = 'file-preview-item';
+      fileItem.innerHTML = `
+        <i class="bi bi-file-earmark file-icon"></i>
+        <span>${file.name}</span>
+        <span class="file-size">(${formatFileSize(file.size)})</span>
+        <span class="remove-file" onclick="removeFile('${file.name}', '${category}')">×</span>
+      `;
+      previewContainer.appendChild(fileItem);
+    }
+
+    function removeFile(fileName, category) {
+      uploadedFiles[category] = uploadedFiles[category].filter(file => file.name !== fileName);
+      const previewContainer = document.getElementById(`${category}Preview`);
+      const fileItems = previewContainer.querySelectorAll('.file-preview-item');
+      fileItems.forEach(item => {
+        if (item.textContent.includes(fileName)) {
+          item.remove();
+        }
+      });
+    }
+
+    function formatFileSize(bytes) {
+      if (bytes === 0) return '0 Bytes';
+      const k = 1024;
+      const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+      const i = Math.floor(Math.log(bytes) / Math.log(k));
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
+
+    // Enhanced form validation
+    function validateForm() {
+      const errors = [];
+      const form = document.getElementById('dentalJobForm');
+
+      // Required field validation
+      const requiredFields = ['dateIn', 'dateOut', 'clinicName', 'patientName'];
+      requiredFields.forEach(field => {
+        const element = document.querySelector(`[name="${field}"]`);
+        if (!element.value.trim()) {
+          errors.push(`${element.previousElementSibling.textContent} is required`);
+          element.classList.add('is-invalid');
+        } else {
+          element.classList.remove('is-invalid');
+          element.classList.add('is-valid');
+        }
+      });
+
+      // Date validation
+      const dateIn = new Date(document.getElementById('dateIn').value);
+      const dateOut = new Date(document.getElementById('dateOut').value);
+      if (dateOut < dateIn) {
+        errors.push('Date out must be after date in');
+        document.getElementById('dateOut').classList.add('is-invalid');
+      }
+
+      // Work type validation
+      const workTypes = document.querySelectorAll('input[name="workType"]:checked');
+      if (workTypes.length === 0) {
+        errors.push('Please select at least one work type');
+      }
+
+      // Teeth selection validation
+      const teeth = document.querySelectorAll('input[name="teeth"]:checked');
+      if (teeth.length === 0) {
+        errors.push('Please select at least one tooth');
+      }
+
+      return errors;
+    }
+
+    // Form functions
+    function exportPDF() {
+      showNotification('Generating PDF...', 'info');
+
+      // Get form data
+      const formData = new FormData(document.getElementById('dentalJobForm'));
+      const data = Object.fromEntries(formData);
+
+      // Create PDF content
+      const pdfContent = `
+        <html>
+        <head>
+          <title>MicroDental Lab - Job Order</title>
+          <style>
+            body { 
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+              margin: 0; 
+              padding: 20px; 
+              background: #f8f9fa;
+              color: #333;
+            }
+            .container {
+              max-width: 800px;
+              margin: 0 auto;
+              background: white;
+              padding: 30px;
+              border-radius: 10px;
+              box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            }
+            .header { 
+              text-align: center; 
+              margin-bottom: 40px; 
+              padding: 20px;
+              background: linear-gradient(135deg, #c84a00 0%, #c69121 100%);
+              color: white;
+              border-radius: 8px;
+            }
+            .header h1 { 
+              margin: 0; 
+              font-size: 28px; 
+              font-weight: bold;
+            }
+            .header h2 { 
+              margin: 10px 0 0 0; 
+              font-size: 18px; 
+              font-weight: 300;
+            }
+            .header p { 
+              margin: 15px 0 0 0; 
+              font-size: 14px; 
+              opacity: 0.9;
+            }
+            .section { 
+              margin-bottom: 25px; 
+              padding: 20px;
+              background: #f8f9fa;
+              border-radius: 8px;
+              border-left: 4px solid #c84a00;
+            }
+            .section h3 { 
+              color: #c84a00; 
+              border-bottom: 2px solid #c69121; 
+              padding-bottom: 8px; 
+              margin-bottom: 15px;
+              font-size: 18px;
+              font-weight: 600;
+            }
+            .form-group { 
+              margin-bottom: 12px; 
+              display: flex;
+              align-items: center;
+            }
+            .label { 
+              font-weight: 600; 
+              color: #555;
+              min-width: 150px;
+              font-size: 14px;
+            }
+            .value { 
+              margin-left: 15px; 
+              color: #333;
+              font-size: 14px;
+              flex: 1;
+            }
+            .checkbox-list { 
+              margin-left: 20px; 
+            }
+            .checkbox-list div {
+              margin-bottom: 5px;
+              padding: 5px 0;
+              border-bottom: 1px solid #eee;
+            }
+            .checkbox-list div:last-child {
+              border-bottom: none;
+            }
+            .footer { 
+              margin-top: 40px; 
+              text-align: center; 
+              font-size: 12px; 
+              color: #666;
+              padding: 20px;
+              background: #f8f9fa;
+              border-radius: 8px;
+            }
+            .work-requested {
+              background: #e8f4f8;
+              border-left-color: #099aa7;
+            }
+            .work-requested h3 {
+              color: #099aa7;
+            }
+            .shade-info {
+              background: #fff3e0;
+              border-left-color: #ff9800;
+            }
+            .shade-info h3 {
+              color: #ff9800;
+            }
+            .preferences {
+              background: #f3e5f5;
+              border-left-color: #9c27b0;
+            }
+            .preferences h3 {
+              color: #9c27b0;
+            }
+            .job-description {
+              background: #e8f5e8;
+              border-left-color: #4caf50;
+            }
+            .job-description h3 {
+              color: #4caf50;
+            }
+            .schedule {
+              background: #fff8e1;
+              border-left-color: #ffc107;
+            }
+            .schedule h3 {
+              color: #ffc107;
+            }
+            .clinic-info {
+              background: #fce4ec;
+              border-left-color: #e91e63;
+            }
+            .clinic-info h3 {
+              color: #e91e63;
+            }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            <div class="header">
+              <h1>MICRO Tech Dental Lab</h1>
+              <h2>Job Order Form</h2>
+              <p>Qatar Doha - Abu hamour | Mobile: +974 518 70007 | TEL: +974 4463 1594 | Lab Manager: +974 51 8000 56 | Email: info@microdentaltech.com</p>
+            </div>
+            
+            <div class="section">
+              <h3>📋 Job Information</h3>
+              <div class="form-group">
+                <span class="label">Job Number:</span>
+                <span class="value">${data.jobNumber || 'Not specified'}</span>
+              </div>
+              <div class="form-group">
+                <span class="label">Patient's File No.:</span>
+                <span class="value">${data.patientFileNo || 'Not specified'}</span>
+              </div>
+            </div>
+            
+            <div class="section schedule">
+              <h3>📅 Schedule</h3>
+              <div class="form-group">
+                <span class="label">Received Date:</span>
+                <span class="value">${data.receivedDate || 'Not specified'}</span>
+              </div>
+              <div class="form-group">
+                <span class="label">Delivery Date:</span>
+                <span class="value">${data.deliveryDate || 'Not specified'}</span>
+              </div>
+            </div>
+            
+            <div class="section clinic-info">
+              <h3>🏥 Clinic & Patient Information</h3>
+              <div class="form-group">
+                <span class="label">Doctor Name:</span>
+                <span class="value">${data.doctorName || 'Not specified'}</span>
+              </div>
+              <div class="form-group">
+                <span class="label">Dental Center:</span>
+                <span class="value">${data.dentalCenter || 'Not specified'}</span>
+              </div>
+              <div class="form-group">
+                <span class="label">Telephone:</span>
+                <span class="value">${data.telephone || 'Not specified'}</span>
+              </div>
+              <div class="form-group">
+                <span class="label">Address:</span>
+                <span class="value">${data.address || 'Not specified'}</span>
+              </div>
+              <div class="form-group">
+                <span class="label">Patient Name:</span>
+                <span class="value">${data.patientName || 'Not specified'}</span>
+              </div>
+              <div class="form-group">
+                <span class="label">Gender:</span>
+                <span class="value">${data.gender || 'Not specified'}</span>
+              </div>
+              <div class="form-group">
+                <span class="label">Age:</span>
+                <span class="value">${data.age || 'Not specified'}</span>
+              </div>
+              <div class="form-group">
+                <span class="label">Mobile:</span>
+                <span class="value">${data.mobile || 'Not specified'}</span>
+              </div>
+            </div>
+            
+            <div class="section work-requested">
+              <h3>🔧 Work Requested</h3>
+              <div class="checkbox-list">
+                ${Object.keys(data).filter(key => data[key] && key.startsWith('workType')).map(key => `<div>✓ ${data[key]}</div>`).join('')}
+              </div>
+            </div>
+            
+            <div class="section shade-info">
+              <h3>🎨 Shade Information</h3>
+              <div class="form-group">
+                <span class="label">Shade:</span>
+                <span class="value">${data.shade || 'Not specified'}</span>
+              </div>
+              <div class="form-group">
+                <span class="label">Stump Shade:</span>
+                <span class="value">${data.stumpShade || 'Not specified'}</span>
+              </div>
+              <div class="form-group">
+                <span class="label">Gingival Shade:</span>
+                <span class="value">${data.gingShade || 'Not specified'}</span>
+              </div>
+            </div>
+            
+            <div class="section preferences">
+              <h3>⚙️ Preferences</h3>
+              <div class="form-group">
+                <span class="label">Occlusal Staining:</span>
+                <span class="value">${data.occlusalStaining || 'Not specified'}</span>
+              </div>
+              <div class="form-group">
+                <span class="label">Texture:</span>
+                <span class="value">${data.texture || 'Not specified'}</span>
+              </div>
+            </div>
+            
+            <div class="section job-description">
+              <h3>📝 Job Description</h3>
+              <div class="form-group">
+                <span class="value">${data.jobDescription || 'No description provided'}</span>
+              </div>
+            </div>
+            
+            <div class="footer">
+              <p>Generated on ${new Date().toLocaleDateString()} at ${new Date().toLocaleTimeString()}</p>
+              <p>MicroDental Lab - Precision Dental Solutions</p>
+            </div>
+          </div>
+        </body>
+        </html>
+      `;
+
+      // Create and download PDF
+      const printWindow = window.open('', '_blank');
+      printWindow.document.write(pdfContent);
+      printWindow.document.close();
+      printWindow.focus();
+      printWindow.print();
+
+      setTimeout(() => {
+        showNotification('PDF exported successfully!', 'success');
+      }, 1000);
+    }
+
+    function resetForm() {
+      if (confirm('Are you sure you want to reset the form? All data will be lost.')) {
+        document.getElementById('dentalJobForm').reset();
+        Object.keys(uploadedFiles).forEach(category => {
+          uploadedFiles[category] = [];
+          document.getElementById(`${category}Preview`).innerHTML = '';
+        });
+        localStorage.removeItem('dentalLabDraft');
+        showNotification('Form reset successfully', 'success');
+      }
+    }
+
+    function saveDraft() {
+      autoSave();
+      showNotification('Draft saved successfully!', 'success');
+    }
+
+    function formatText(command) {
+      const textarea = document.getElementById('jobDescription');
+      const start = textarea.selectionStart;
+      const end = textarea.selectionEnd;
+      const selectedText = textarea.value.substring(start, end);
+
+      let formattedText = '';
+      switch (command) {
+        case 'bold':
+          formattedText = `**${selectedText}**`;
+          break;
+        case 'italic':
+          formattedText = `*${selectedText}*`;
+          break;
+        case 'underline':
+          formattedText = `__${selectedText}__`;
+          break;
+        case 'bulletList':
+          formattedText = `• ${selectedText}`;
+          break;
+        case 'numberList':
+          formattedText = `1. ${selectedText}`;
+          break;
+      }
+
+      textarea.value = textarea.value.substring(0, start) + formattedText + textarea.value.substring(end);
+      textarea.focus();
+    }
+
+    // Enhanced form submission
+    document.getElementById('dentalJobForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const errors = validateForm();
+      if (errors.length > 0) {
+        showNotification(errors.join('<br>'), 'error');
+        return;
+      }
+
+      // Show loading state
+      const submitBtn = this.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Submitting...';
+      submitBtn.disabled = true;
+
+      // Simulate upload progress
+      const progressBar = document.getElementById('uploadProgress');
+      const progressBarFill = progressBar.querySelector('.progress-bar');
+      const progressText = progressBar.querySelector('.progress-text');
+
+      progressBar.style.display = 'block';
+
+      let progress = 0;
+      const interval = setInterval(() => {
+        progress += Math.random() * 15;
+        if (progress > 100) progress = 100;
+        progressBarFill.style.width = progress + '%';
+        progressText.textContent = `Uploading... ${Math.round(progress)}%`;
+
+        if (progress >= 100) {
+          clearInterval(interval);
+          setTimeout(() => {
+            showNotification('Case submitted successfully! We will contact you soon.', 'success');
+            progressBar.style.display = 'none';
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            localStorage.removeItem('dentalLabDraft');
+          }, 1000);
+        }
+      }, 200);
+    });
+
+    // Auto-save on form change
+    document.getElementById('dentalJobForm').addEventListener('input', function () {
+      clearTimeout(autoSaveTimer);
+      autoSaveTimer = setTimeout(autoSave, 2000);
+    });
+
+    // Materials Selection Functions
+    function updateSelectedMaterialsDisplay() {
+      const checkboxes = document.querySelectorAll('#materialsModal input[name="materials"]:checked');
+      const selectedMaterialsList = document.getElementById('selectedMaterialsList');
+
+      if (checkboxes.length === 0) {
+        selectedMaterialsList.innerHTML = '<span class="text-muted">No materials selected</span>';
+        return;
+      }
+
+      const materials = Array.from(checkboxes).map(cb => cb.value);
+      selectedMaterialsList.innerHTML = materials.map(material =>
+        `<span class="badge bg-primary me-2 mb-2">${material}</span>`
+      ).join('');
+    }
+
+    function saveMaterials() {
+      const checkboxes = document.querySelectorAll('#materialsModal input[name="materials"]:checked');
+      const selectedMaterials = Array.from(checkboxes).map(cb => cb.value);
+
+      // Store selected materials
+      localStorage.setItem('selectedMaterials', JSON.stringify(selectedMaterials));
+
+      // Show notification
+      showNotification(`${selectedMaterials.length} material(s) selected successfully!`, 'success');
+
+      // Close modal
+      const modal = bootstrap.Modal.getInstance(document.getElementById('materialsModal'));
+      if (modal) {
+        modal.hide();
+      }
+    }
+
+    function loadSelectedMaterials() {
+      const saved = localStorage.getItem('selectedMaterials');
+      if (saved) {
+        const materials = JSON.parse(saved);
+        materials.forEach(material => {
+          const checkbox = document.querySelector(`#materialsModal input[value="${material}"]`);
+          if (checkbox) {
+            checkbox.checked = true;
+          }
+        });
+        updateSelectedMaterialsDisplay();
+      }
+    }
+
+    // Equalize checkbox-group heights in WORK REQUESTED section
+    function equalizeCheckboxGroupHeights() {
+      // Find the WORK REQUESTED section by looking for section with title "WORK REQUESTED"
+      const sections = document.querySelectorAll('.form-section');
+      let workRequestedSection = null;
+
+      sections.forEach(section => {
+        const title = section.querySelector('.section-title');
+        if (title && title.textContent.trim() === 'WORK REQUESTED') {
+          workRequestedSection = section;
+        }
+      });
+
+      if (!workRequestedSection) return;
+
+      // Find all checkbox-groups in WORK REQUESTED section
+      const checkboxGroups = workRequestedSection.querySelectorAll('.checkbox-group');
+      if (checkboxGroups.length === 0) return;
+
+      // Reset heights to auto to get natural height
+      checkboxGroups.forEach(group => {
+        group.style.height = 'auto';
+      });
+
+      // Find the maximum height
+      let maxHeight = 0;
+      checkboxGroups.forEach(group => {
+        const height = group.offsetHeight;
+        if (height > maxHeight) {
+          maxHeight = height;
+        }
+      });
+
+      // Set all to the maximum height
+      checkboxGroups.forEach(group => {
+        group.style.height = maxHeight + 'px';
+      });
+    }
+
+    // Initialize everything
+    document.addEventListener('DOMContentLoaded', function () {
+      loadDraft();
+      initDragAndDrop();
+      loadSelectedMaterials();
+
+      // Initialize materials modal
+      const materialsModal = document.getElementById('materialsModal');
+      if (materialsModal) {
+        // Update display when modal opens
+        materialsModal.addEventListener('show.bs.modal', function () {
+          updateSelectedMaterialsDisplay();
+        });
+
+        // Listen for checkbox changes
+        const materialCheckboxes = materialsModal.querySelectorAll('input[name="materials"]');
+        materialCheckboxes.forEach(checkbox => {
+          checkbox.addEventListener('change', updateSelectedMaterialsDisplay);
+        });
+      }
+
+      // Equalize checkbox group heights
+      equalizeCheckboxGroupHeights();
+
+      // Re-equalize on window resize
+      let resizeTimer;
+      window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(equalizeCheckboxGroupHeights, 250);
+      });
+
+      // Initialize AOS
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true
+      });
+    });
+  </script>
+
+  <script src="assets/js/mesh-background.js"></script>
+</body>
+
+</html>
+
+</html>

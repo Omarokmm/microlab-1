@@ -1,0 +1,918 @@
+/* Upload Case Form Styles */
+
+.upload-page {
+  padding-top: 80px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+}
+
+.upload-form-container {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 2rem 0;
+  position: relative;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.upload-form-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+}
+
+/* Form Header */
+.form-header {
+  background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+  color: white;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.header-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.logo-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.logo-text h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.logo-text p {
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.contact-info {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.contact-info p {
+  margin: 0.3rem 0;
+}
+
+.header-right {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.header-right .btn {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.header-right .btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Form Sections */
+.dental-job-form {
+  padding: 2rem;
+}
+
+.form-section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.form-section:last-child {
+  border-bottom: none;
+}
+
+.section-title {
+  color: var(--accent-color);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-color);
+  display: inline-block;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.form-control {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 0.2rem rgba(158, 107, 28, 0.25);
+}
+
+.form-control::placeholder {
+  color: #adb5bd;
+}
+
+/* Radio and Checkbox Groups */
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.checkbox-group {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Make all checkbox groups in WORK REQUESTED section equal height */
+.form-section .row {
+  display: flex;
+}
+
+.form-section .row .col-md-6 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Make ALL checkbox groups have the same height across both columns - JavaScript will set equal heights */
+.form-section .row .col-md-6 .checkbox-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.checkbox-group h4 {
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.form-check {
+  margin-bottom: 0.8rem;
+}
+
+.form-check-input {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.form-check-input:checked {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.2rem rgba(158, 107, 28, 0.25);
+}
+
+.form-check-label {
+  font-weight: 500;
+  color: var(--default-color);
+  cursor: pointer;
+}
+
+/* Teeth Selection */
+.teeth-selection {
+  margin-top: 1.5rem;
+}
+
+.teeth-selection h4 {
+  color: var(--accent-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.teeth-grid {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+}
+
+.teeth-row {
+  margin-bottom: 1rem;
+}
+
+.teeth-row:last-child {
+  margin-bottom: 0;
+}
+
+.teeth-label {
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+.teeth-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.teeth-checkboxes .form-check {
+  margin-bottom: 0.5rem;
+  min-width: 50px;
+}
+
+.teeth-checkboxes .form-check-label {
+  font-size: 0.9rem;
+  padding: 0.3rem 0.6rem;
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.teeth-checkboxes .form-check-input:checked + .form-check-label {
+  background: var(--accent-color);
+  color: white;
+  border-color: var(--accent-color);
+}
+
+/* Rich Text Editor */
+.rich-text-toolbar {
+  background: #f8f9fa;
+  padding: 0.5rem;
+  border: 1px solid #e9ecef;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.rich-text-toolbar .btn {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+.rich-text-area {
+  border-radius: 0 0 8px 8px;
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* Enhanced File Upload */
+.drag-drop-zone {
+  border: 3px dashed #dee2e6;
+  border-radius: 15px;
+  padding: 3rem 2rem;
+  text-align: center;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.drag-drop-zone:hover,
+.drag-drop-zone.dragover {
+  border-color: var(--accent-color);
+  background: rgba(158, 107, 28, 0.05);
+  transform: translateY(-2px);
+}
+
+.drag-drop-content i {
+  font-size: 3rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.drag-drop-content h4 {
+  color: var(--heading-color);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.drag-drop-content p {
+  color: #6c757d;
+  margin-bottom: 1.5rem;
+}
+
+.file-types {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.file-type-badge {
+  background: var(--accent-color);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.file-upload-wrapper {
+  position: relative;
+}
+
+.file-input {
+  padding: 0.5rem;
+  border: 2px dashed #dee2e6;
+  background: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.file-input:hover {
+  border-color: var(--accent-color);
+  background: rgba(158, 107, 28, 0.05);
+}
+
+.file-preview {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.file-preview-item {
+  background: #e9ecef;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--default-color);
+}
+
+.file-preview-item .file-icon {
+  color: var(--accent-color);
+}
+
+.file-preview-item .remove-file {
+  color: #dc3545;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.file-preview-item .remove-file:hover {
+  color: #a71e2c;
+}
+
+.upload-progress {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+}
+
+.progress {
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  color: var(--default-color);
+  text-align: center;
+}
+
+.form-control[type="file"] {
+  padding: 0.5rem;
+}
+
+.form-text {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-top: 0.3rem;
+}
+
+/* Submit Section */
+.submit-section {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.submit-section .btn {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.submit-section .btn-primary {
+  background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+  border: none;
+}
+
+.submit-section .btn-primary:hover {
+  background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(158, 107, 28, 0.3);
+}
+
+.submit-section .btn-outline-secondary {
+  border: 2px solid #6c757d;
+  color: #6c757d;
+}
+
+.submit-section .btn-outline-secondary:hover {
+  background: #6c757d;
+  border-color: #6c757d;
+  color: white;
+}
+
+/* Enhanced Mobile Responsiveness */
+@media (max-width: 768px) {
+  .upload-page {
+    padding-top: 70px;
+  }
+  
+  .upload-form-container {
+    margin: 1rem;
+    border-radius: 15px;
+  }
+  
+  .form-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+  
+  .header-right {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .header-right .btn {
+    flex: 1;
+    min-width: 120px;
+  }
+  
+  .dental-job-form {
+    padding: 1.5rem;
+  }
+  
+  .teeth-checkboxes {
+    justify-content: center;
+    gap: 0.3rem;
+  }
+  
+  .teeth-checkboxes .form-check {
+    min-width: 45px;
+  }
+  
+  .teeth-checkboxes .form-check-label {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .radio-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .checkbox-group {
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+  
+  .checkbox-group h4 {
+    font-size: 1rem;
+  }
+  
+  .submit-section {
+    padding: 1.5rem;
+  }
+  
+  .submit-section .btn {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  .submit-section .btn:last-child {
+    margin-bottom: 0;
+  }
+  
+  .form-control {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  .section-title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .upload-form-container {
+    margin: 1rem 0;
+  }
+  
+  .dental-job-form {
+    padding: 1rem;
+  }
+  
+  .form-header {
+    padding: 1.5rem;
+  }
+  
+  .logo-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .logo-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .teeth-checkboxes {
+    gap: 0.3rem;
+  }
+  
+  .teeth-checkboxes .form-check {
+    min-width: 40px;
+  }
+  
+  .teeth-checkboxes .form-check-label {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
+
+/* Notification System */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: white;
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  z-index: 9999;
+  transform: translateX(400px);
+  transition: transform 0.3s ease;
+  border-left: 4px solid;
+  min-width: 300px;
+}
+
+.notification.show {
+  transform: translateX(0);
+}
+
+.notification-success {
+  border-left-color: #28a745;
+  color: #28a745;
+}
+
+.notification-error {
+  border-left-color: #dc3545;
+  color: #dc3545;
+}
+
+.notification-info {
+  border-left-color: #17a2b8;
+  color: #17a2b8;
+}
+
+.notification i {
+  font-size: 1.2rem;
+}
+
+/* Enhanced Mobile Touch Interactions */
+@media (max-width: 768px) {
+  .drag-drop-zone {
+    padding: 2rem 1rem;
+  }
+  
+  .drag-drop-content i {
+    font-size: 2.5rem;
+  }
+  
+  .drag-drop-content h4 {
+    font-size: 1.1rem;
+  }
+  
+  .file-types {
+    gap: 0.3rem;
+  }
+  
+  .file-type-badge {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+  }
+  
+  .file-preview-item {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .notification {
+    right: 10px;
+    left: 10px;
+    min-width: auto;
+    transform: translateY(-100px);
+  }
+  
+  .notification.show {
+    transform: translateY(0);
+  }
+  
+  .teeth-checkboxes .form-check-label {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.8rem;
+  }
+  
+  .checkbox-group {
+    padding: 0.8rem;
+  }
+  
+  .form-control {
+    padding: 0.8rem;
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .submit-section .btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* Touch-friendly enhancements */
+@media (hover: none) and (pointer: coarse) {
+  .form-check-input {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .teeth-checkboxes .form-check-label {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .file-preview-item {
+    min-height: 44px;
+  }
+  
+  .drag-drop-zone {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Animation Effects */
+.form-section {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading states */
+.form-control:disabled {
+  background-color: #f8f9fa;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Enhanced focus states for accessibility */
+.form-control:focus,
+.btn:focus,
+.form-check-input:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for all interactive elements */
+.form-control,
+.btn,
+.form-check-input,
+.file-preview-item {
+  transition: all 0.3s ease;
+}
+
+/* Enhanced hover effects */
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.file-preview-item:hover {
+  background: #e9ecef;
+  transform: translateY(-1px);
+}
+
+.teeth-checkboxes .form-check-label:hover {
+  background: rgba(158, 107, 28, 0.1);
+  border-color: var(--accent-color);
+}
+
+/* Custom Scrollbar */
+.rich-text-area::-webkit-scrollbar {
+  width: 8px;
+}
+
+.rich-text-area::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.rich-text-area::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 4px;
+}
+
+.rich-text-area::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+/* Loading States */
+.form-control:disabled {
+  background-color: #f8f9fa;
+  opacity: 0.6;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Success/Error States */
+.form-control.is-valid {
+  border-color: #28a745;
+}
+
+.form-control.is-invalid {
+  border-color: #dc3545;
+}
+
+.invalid-feedback {
+  display: block;
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.valid-feedback {
+  display: block;
+  color: #28a745;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Materials Modal Styles */
+.material-category {
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 1rem;
+}
+
+.material-category:last-child {
+  border-bottom: none;
+}
+
+.category-title {
+  color: var(--accent-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(158, 107, 28, 0.2);
+}
+
+.material-option {
+  padding: 0.75rem;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.material-option:hover {
+  background: #ffffff;
+  border-color: var(--accent-color);
+  box-shadow: 0 2px 8px rgba(158, 107, 28, 0.1);
+}
+
+.material-option .form-check-input:checked ~ .form-check-label {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.material-option .form-check-input:checked {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.selected-materials-display {
+  border: 2px solid var(--accent-color);
+  background: #fff9f0 !important;
+}
+
+.selected-materials-list {
+  min-height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.selected-materials-list .badge {
+  font-size: 0.9rem;
+  padding: 0.5rem 0.75rem;
+  font-weight: 500;
+}
+
