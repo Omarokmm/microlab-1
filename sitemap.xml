@@ -29,12 +29,12 @@
   </url>
 
   <!-- Upload Case Page -->
-  <url>
+  <!-- <url>
     <loc>https://microlab-delta.vercel.app/upload-case.html</loc>
     <lastmod>2024-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
+  </url> -->
 
   <!-- Contact Page -->
   <url>
