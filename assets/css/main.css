@@ -1410,6 +1410,38 @@ section,
     justify-content: center;
   }
 }
+   
+   /* Custom Carousel Indicators */
+   .custom-indicators {
+     bottom: 15px; 
+     gap: 8px;
+     margin-bottom: 0;
+   }
+   
+   .custom-indicators button {
+     width: 10px !important;
+     height: 10px !important;
+     border-radius: 50%;
+     border: 2px solid var(--accent-color) !important;
+     background-color: transparent !important;
+     opacity: 0.7;
+     transition: all 0.3s ease;
+     margin: 0 !important;
+     padding: 0;
+   }
+   
+   .custom-indicators button.active {
+     background-color: var(--accent-color) !important;
+     transform: scale(1.2);
+     opacity: 1;
+     width: 12px !important;
+     height: 12px !important;
+   }
+   
+   .custom-indicators button:hover {
+     opacity: 1;
+     background-color: color-mix(in srgb, var(--accent-color), transparent 50%) !important;
+   }
 
 /*--------------------------------------------------------------
 # Home About Section
